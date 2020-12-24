@@ -38,4 +38,57 @@ type (
 		Charisma      int    `json:"charisma"`       // 魅力
 		Willpower     int    `json:"willpower"`      // 意志力
 	}
+
+	// 项目类别
+	Category struct {
+		CategoryId int    `json:"category_id"` // 项目类别ID
+		Groups     []int  `json:"groups"`      //	项目组
+		Name       string `json:"name"`        // 项目类别名称
+		Published  bool   `json:"published"`   // 是否发布
+	}
+
+	// 星座
+	Constellation struct {
+		ConstellationId int      `json:"constellation_id"`
+		Name            string   `json:"name"`
+		Position        Position `json:"position"`  // 星座坐标
+		RegionId        int      `json:"region_id"` // 星座所属区域
+		Systems         []int    `json:"systems"`   // 太阳系ID
+	}
+
+	// 派系
+	Faction struct {
+		CorporationId        int    `json:"corporation_id"`         // 星座ID
+		Description          string `json:"description"`            // 描述
+		FactionId            int    `json:"faction_id"`             // 派系ID
+		IsUnique             bool   `json:"is_unique"`              // 是否唯一
+		Name                 string `json:"name"`                   // 名称
+		SizeFactor           int    `json:"size_factor"`            // 因子  ？
+		MilitiaCorporationId int    `json:"militia_corporation_id"` // 民兵公司ID ？
+		SolarSystemId        int    `json:"solar_system_id"`        // 太阳系ID
+		StationCount         int    `json:"station_count"`          // 空间站个数 ？
+		StationSystemCount   int    `json:"station_system_count"`   // 空间站系统个数 ？
+	}
+
+	Graphic struct {
+		CollisionFile string `json:"collision_file"`
+		GraphicFile   string `json:"graphic_file"`
+		GraphicId     int    `json:"graphic_id"`
+		IconFolder    string `json:"icon_folder"`
+		SofDna        string `json:"sof_dna"`
+		SofFationName string `json:"sof_fation_name"`
+		SofHullName   string `json:"sof_hull_name"`
+		SofRaceName   string `json:"sof_race_name"`
+	}
+
+	// 组
+	Group struct {
+		CategoryId int `json:"category_id"`
+		GroupId    int `json:"group_id"`
+		Name       int `json:"name"`
+		Published  int `json:"published"`
+		Types      int `json:"types"`
+	}
+
+	// int `json:""`
 )
